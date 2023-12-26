@@ -1,3 +1,6 @@
+-- data: 26/12/2023
+-- a função karatsuba tem objetivo de multiplicação de numeros naturais
+-- grandes de forma rapida com uso, por exemplo, em criptografia
 karatsuba :: Integer -> Integer -> Int -> Integer
 karatsuba u v n
           | n <= 3  = u * v
@@ -7,7 +10,4 @@ karatsuba u v n
          s = v `mod` (10 ^ m)
          r = v `div` (10 ^ m)
          p = u `div` (10 ^ m)
-         
---           pr = karatsuba p r m
---          qs = karatsuba q s m
---          y = karatsuba (p + q) (r + s) (m + 1)
+ 
