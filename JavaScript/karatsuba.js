@@ -19,3 +19,4 @@ function karatsuba(u, v, n) {
   
 }
 
+module.exports = {karatsuba} 
