@@ -1,5 +1,5 @@
 -- data: 26/12/2023
--- a função karatsuba tem objetivo de multiplicação de numeros naturais
+-- a função karatsuba tem objetivo de multiplicação de numeros naturais , pelo algoritmo karatsuba e ofman
 -- grandes de forma rapida com uso, por exemplo, em criptografia
 karatsuba :: Integer -> Integer -> Int -> Integer
 karatsuba u v n
