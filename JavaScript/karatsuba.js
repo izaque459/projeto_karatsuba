@@ -3,7 +3,8 @@
     grandes de forma rapida com uso, por exemplo, em criptografia
 */
 
-function karatsuba(u, v, n) {
+// implementacao atualizada em arrow function
+ const karatsuba = (u, v, n)=>{
   if (n <= 3) {
     return u * v; //caso base
   }

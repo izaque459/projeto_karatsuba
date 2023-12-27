@@ -1,5 +1,10 @@
+//data: 27/12/2023
+//node app.js
+
 const {karatsuba} = require('./karatsuba.js');
 
-const resultado = karatsuba(9999,7777,4);
+const a = 9999;
+const b = 7777;
+const resultado = karatsuba(a,b,4);
 
-console.log(resultado);
+console.log(`${a} vezes ${b} eh ${resultado}`);
