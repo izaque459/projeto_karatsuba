@@ -7,10 +7,15 @@
  const karatsuba = (u, v, n)=>{
   if (n <= 3) {
     return u * v; //caso base
-  }
+  } else{
 
-  // uso recursivo da função
-  const m = Math.ceil(n / 2);
+  // uso recursivo da função com uma closure auto invocada
+  return ((m,p,q,r,s)=>{
+	  return karatsuba(p, r, m) * Math.pow(10, 2 * m) + 
+			(karatsuba(p + q, r + s, m + 1) - karatsuba(p, r, m) - karatsuba(q, s, m)) * Math.pow(10, m) + 
+			karatsuba(q, s, m);})(Math.ceil(n / 2),Math.floor(u / Math.pow(10, Math.ceil(n / 2))),u % Math.pow(10, Math.ceil(n / 2)),Math.floor(v / Math.pow(10, Math.ceil(n / 2))),v % Math.pow(10, Math.ceil(n / 2)));
+ 
+ /* const m = Math.ceil(n / 2);
   const p = Math.floor(u / Math.pow(10, m));
   const q = u % Math.pow(10, m);
   const r = Math.floor(v / Math.pow(10, m));
@@ -18,8 +23,8 @@
 
   return karatsuba(p, r, m) * Math.pow(10, 2 * m) + 
 		(karatsuba(p + q, r + s, m + 1) - karatsuba(p, r, m) - karatsuba(q, s, m)) * Math.pow(10, m) + 
-		 karatsuba(q, s, m);
- 
+		 karatsuba(q, s, m);*/
+  }
 }
 
 module.exports = {karatsuba} 

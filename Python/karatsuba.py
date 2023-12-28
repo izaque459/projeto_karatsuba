@@ -1,18 +1,17 @@
-def karatsuba(u, v, n):
-    if n <= 3:
-        return u * v
+'''
+    data: 28/12/2023
+    a função karatsuba tem objetivo de multiplicação de numeros naturais , pelo algoritmo karatsuba e ofman
+    grandes de forma rapida com uso, por exemplo, em criptografia
+'''
+#uso de função lambda com uma closure auto invocada
+karatsuba = lambda u, v, n: u*v if (n <= 3) else (
+                    lambda m,p,q,r,s: karatsuba(p, r, m)* (10**(2 * m)) + (karatsuba(p + q, r + s, m + 1) - karatsuba(p, r, m) - karatsuba(q, s, m))* (10**m) + karatsuba(q, s, m)
+                    )(
 
-    m = int(n / 2)
-    p = int(u / (10**m))
-    q = u % (10**m)
-    r = int(v / (10**m))
-    s = v % (10**m)
-
-    pr = karatsuba(p, r, m)
-    qs = karatsuba(q, s, m)
-    y = karatsuba(p + q, r + s, m + 1)
-
-    uv = pr * (10**(2 * m)) + (y - pr - qs) * (10**m) + qs
-    return uv
-
-
+                        int(n / 2),
+                        int(u / (10**int(n / 2))),
+                        u % (10**int(n / 2)),
+                        int(v / (10**int(n / 2))),
+                        v % (10**int(n / 2))
+                        )
+    
