@@ -16,8 +16,10 @@
   const r = Math.floor(v / Math.pow(10, m));
   const s = v % Math.pow(10, m);
 
-  return karatsuba(p, r, m) * Math.pow(10, 2 * m) + (karatsuba(p + q, r + s, m + 1) - karatsuba(p, r, m) - karatsuba(q, s, m)) * Math.pow(10, m) + karatsuba(q, s, m);
-  
+  return karatsuba(p, r, m) * Math.pow(10, 2 * m) + 
+		(karatsuba(p + q, r + s, m + 1) - karatsuba(p, r, m) - karatsuba(q, s, m)) * Math.pow(10, m) + 
+		 karatsuba(q, s, m);
+ 
 }
 
 module.exports = {karatsuba} 
