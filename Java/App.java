@@ -1,5 +1,5 @@
 
-import Karatsuba.Algoritmo;
+import Karatsuba.Karatsuba;
 
 
 public class App {
@@ -10,16 +10,9 @@ public class App {
 	int v = 7777;
 	int n = 4;
 	
-	Algoritmo karatsuba =  (x, y, z) -> {
-            if (z <= 3) {
-                return x * y;
-            } else {
-                return 0; 
-            }
-        };
-	
-	int produto = karatsuba.calcule(u,v,n);
-	
+		Karatsuba karatsuba = new Karatsuba();
+		
+		int produto = karatsuba.calcule(u,v,n);
 	
 	System.out.println("O produto de " + u + " e " + v + " eh: " + produto);
 

@@ -7,7 +7,7 @@ package Karatsuba;
 
 public interface Algoritmo{
 	
-	public abstract int calcule(int u,int v,int n);
+	public abstract int funcao(int u,int v,int n);
 	
 }
 
