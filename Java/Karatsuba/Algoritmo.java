@@ -1,9 +1,13 @@
+/* data: 02/01/2024
+interface funcional usada para implementar a função lambda em java
+*/
+
 package Karatsuba;
 
 
 public interface Algoritmo{
 	
-	int calcule(int u,int v,int n);
+	public abstract int calcule(int u,int v,int n);
 	
 }
 
