@@ -9,7 +9,7 @@
     return u * v; //caso base
   } else{
 
-  // uso recursivo da função com uma closure auto invocada
+  // uso recursivo da função anonima como retorno retorno
   return ((m,p,q,r,s)=>{
 	  return karatsuba(p, r, m) * Math.pow(10, 2 * m) + 
 			(karatsuba(p + q, r + s, m + 1) - karatsuba(p, r, m) - karatsuba(q, s, m)) * Math.pow(10, m) + 
