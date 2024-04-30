@@ -1,6 +1,8 @@
 -- data: 26/12/2023
 -- a função karatsuba tem objetivo de multiplicação de numeros naturais , pelo algoritmo karatsuba e ofman
 -- grandes de forma rapida com uso, por exemplo, em criptografia
+module Karatsuba (karatsuba) where
+
 karatsuba :: Integer -> Integer -> Int -> Integer
 karatsuba u v n
           | n <= 3  = u * v
