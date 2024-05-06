@@ -12,3 +12,7 @@ del main.exe
 del main.hi
 del main.o
 cd..
+cd Java
+javac App.java
+java App
+del App.class
