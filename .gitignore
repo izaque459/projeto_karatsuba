@@ -1,0 +1,9 @@
+# Ignorar arquivos compilados de Haskell
+karatsuba.hi
+Karatsuba.o
+main.exe
+main.hi
+main.o
+
+# Ignorar arquivos compilados de Java
+App.class
