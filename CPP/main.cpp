@@ -12,7 +12,7 @@ int main(){
 
 	produto = karatsuba(u,v,4);
 	
-	cout<<"O produto de u = "<<u<<" e v="<<v<<" eh "<<produto;
+	cout<<"O produto de u = "<<u<<" e v="<<v<<" eh "<<produto<<"\n";
 
 return 0;
 }
