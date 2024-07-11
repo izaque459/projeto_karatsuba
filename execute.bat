@@ -10,3 +10,4 @@ cd..
 cd Java
 javac App.java
 java App
+cd..
