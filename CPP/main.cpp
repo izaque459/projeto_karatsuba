@@ -4,11 +4,10 @@ using namespace std;
 
 int main(){
 	
-	unsigned int produto,u,v;
+	unsigned long long int produto,u,v;
 	
 	u=9999;
 	v=7777;
-	produto=1;
 
 	produto = karatsuba(u,v,4);
 	
