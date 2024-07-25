@@ -10,3 +10,6 @@ App.class
 
 # Ignorar arquivos compilados de C++
 main_executavel.exe
+
+# Ignorar arquivos batch
+execute.bat 
